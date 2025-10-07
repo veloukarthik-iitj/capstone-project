@@ -1,0 +1,11 @@
+pandas>=1.5
+numpy
+scikit-learn
+xgboost
+matplotlib
+seaborn
+pyarrow
+fastparquet
+apache-airflow==2.5.1
+python-dotenv
+joblib
