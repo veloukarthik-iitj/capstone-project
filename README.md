@@ -7,8 +7,8 @@ Starter codebase for the MediCare Hospital capstone project. Uses the UCI Diabet
 1. Create a virtual environment (recommended):
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # mac/linux
+python3 -m venv venv
+source venv/bin/activate  #mac/linux
 .venv\Scripts\activate     # windows
 ```
 
@@ -23,13 +23,20 @@ pip install -r requirements.txt
 4. Run quick local ETL:
 
 ```bash
-python -m src.etl --input data/diabetic_data.csv --tmp data/tmp/diabetic.parquet --output data/cleaned_diabetes.parquet
+python3 -m src.etl --input data/diabetic_data.csv --tmp data/tmp/diabetic.parquet --output data/cleaned_diabetes.parquet
 ```
 
 5. Train a baseline model:
 
 ```bash
-python -m src.model --input data/cleaned_diabetes.parquet --model-path models/baseline.pkl
+python3 -m src.model --input data/cleaned_diabetes.parquet --model-path models/baseline.pkl
+```
+
+6. Visualizing the output
+
+```
+python3 -m src.visualize \
+  --input data/cleaned_diabetes.parquet
 ```
 
 ## Project structure
